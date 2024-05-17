@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css-files/career.css">
+    <title>Career</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="/images/Screenshot (8) 1.png" alt="logo">
+                <ul>
+                    <li><a href="/html-files/index.html" class="nav_link">Home</a></li>
+                    <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                    <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                    <li><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                    <li class="active"><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                    <li><a href="/html-files/contact.html" class="nav_link">Contact Us</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </nav>
+            <div class="dropdown">
+                <li class="active"><a href="/" class="nav_link">Home</a></li>
+                <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                <li><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                <li><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                <li><a href="/html-files/contact.html" class="nav_link">Contact Us</a></li>
+            </div>
+        </header>
+
+        <section class="career">
+            <div class="career-header">
+                <h1>Career</h1>
+            </div>
+        </section>
+        <main>
+            <div class="image"><img src="/images/pngwing.com - 2022-10-16T135632 1.png" alt="jobs"></div>
+            <div class="page-text">
+                <p>
+                    Admiral Trucker is not like working for any other company. We only recruit the 
+                    best as we expect you to take  responsibility for our clients and for yourself from day one.
+                    We strongly believe that you should have the chance to take your career in whatever direction
+                    you want to. 
+                </p>
+                <p>
+                    Opportunities for employment are always available in the following discipline:
+                </p>
+                <ul>
+                    <li>Logistics Manager</li>
+                    <li>Warehouse Managers</li>
+                    <li>Truck Drivers</li>
+                    <li>Marketing Executives</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="/images/Screenshot (8) 1.png" alt="logo">
+                </div>
+                <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="/html-files/index.html">Home</a></li>
+                        <li><a href="/html-files/about.html">About</a></li>
+                        <li><a href="/html-files/services.html">Services</a></li>
+                        <li><a href="/html-files/tracking.html">Tracking</a></li>
+                        <li><a href="/html-files/contact.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="services-footer">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="/html-files/services.html">Road Haulage & Logistics</a></li>
+                        <li><a href="/html-files/services.html">Distribution & WareHousing</a></li>
+                        <li><a href="/html-files/services.html">Equipment Learning</a></li>
+                        <li><a href="/html-files/services.html">Support Services</a></li>
+                        <li><a href="/html-files/services.html">Auto Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <ul>
+                            <li><a href="/html-files/contact.html">+234-7000009090</a></li>
+                            <li><a href="/html-files/contact.html">info@admiraltrucker.net</a></li>
+                            <li><a href="/html-files/contact.html">77th James Street,Lagos State</a></li>
+                            <li><a href="/html-files/contact.html">admiraltrucker.net</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+                <div class="foot-text"><p>Copyright &copy; 2022, Admiral Truckers Limited. All Rights Reserved.</p></div>
+        </footer>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnSvg = document.querySelector('.toggle_btn svg');
+        const dropdownMenu = document.querySelector('.dropdown');
+        const link = document.querySelectorAll('li');
+        link.forEach
+        ((links) => {
+            links.addEventListener("click", () => {
+                document.querySelector("li.active").classList.remove("active");
+                links.classList.add("active");
+            });
+        });
+        toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle('open')
+        const isOpen = dropdownMenu.classList.contains('open')
+
+        toggleBtnSvg.classList = isOpen
+        ? `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+         </svg>`
+
+        : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>`
+    }
+
+    </script>
+</body>
+</html>

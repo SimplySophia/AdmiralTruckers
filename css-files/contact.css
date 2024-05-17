@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-5,100..900&family=League+Spartan:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*list-style: none;*/
+    font-family: 'League Spartan', sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100%;
+    margin: auto;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+nav img{
+    width: 120px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav ul li a{
+    font-size: 1.12rem;
+    color: #ee3131;
+    cursor: pointer;
+}
+nav ul li.active::after{
+    content: '';
+    display: flex;
+    width: 85px;
+    height: 3px;
+    background-color: rgb(238, 49, 49);
+    position: absolute;
+    bottom: 20px;
+    animation: appear  0.3s linear;
+}
+@keyframes appear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 85px;
+    }
+}
+.toggle_btn svg{
+    width: 2rem;
+}
+.contact-bg{
+    background: url(/images/Rectangle\ 21.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+.contact-header{
+    position: absolute;
+    top: 13rem;
+    left: 5rem;
+    display: flex;
+}
+.contact-header h1{
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.contact-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+input{
+    padding: 0.5rem;
+    width: 520px;
+    border-radius: 0.5rem;
+    border: 1px solid #d6dae6;
+    outline: none;
+    background-color: rgb(243, 237, 237);
+    margin: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.msg{
+    display: flex;
+    flex-direction: column;
+}
+.msg input{
+    width: 1060px;
+}
+textarea{
+    border: 1px solid #d6dae6;
+    background-color: rgb(243, 237, 237);
+    outline: none;
+    border-radius: 0.5rem;
+    
+}
+textarea::placeholder{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+button{
+    width: 150px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: rgb(238, 49, 49);
+    color: #ffffff;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+button:hover{
+    scale: 1.05;
+    background-color: rgb(238, 124, 124);
+}
+#errorMessages{
+    margin: 0.5rem 1.5rem;
+    color: red;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(238, 49, 49);
+    padding: 2rem;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+.footer-container h2{
+    margin-bottom: 2rem;
+}
+.footer-container ul li a{
+    color: #ffffff;
+}
+.footer-container ul li{
+    list-style: none;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+.footer-container .logo img{
+    margin-bottom: 1rem;
+}
+.footer-container .contact-info{
+    margin-bottom: 2rem;
+}
+footer .foot-text{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+/*DropDown*/
+.dropdown{
+    position: absolute;
+    right: 2rem;
+    top: 4.2rem;
+    width: 390px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.dropdown li a{
+    color: #ffffff;
+}
+.dropdown.open{
+    height: 270px;
+}
+
+@media only screen and (max-width: 436px){
+    .container{
+        width: 100vw;
+        margin: 0;
+    }
+    nav ul{
+        display: none;
+    }
+    .toggle_btn{
+        display: block;
+    }
+    .dropdown{
+        left: 0;
+    }
+    .dropdown li{
+        align-items: center;
+    }
+    .image img{
+        width: 380px;
+    }
+    .contact-options{
+        display: none;
+    }
+    .fullname input, .details input{
+        display: block;
+        width: 300px;
+        padding:1rem;
+    }
+    .msg input{
+        width: 300px;
+        padding: 1rem;
+    }
+    .footer-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .foot-text{
+        width: 35ch;
+        margin: auto;
+    }
+}
+

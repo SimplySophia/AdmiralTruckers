@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css-files/tracking.css">
+    <title>Tracking</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="/images/Screenshot (8) 1.png" alt="logo">
+                <ul>
+                    <li><a href="/html-files/index.html" class="nav_link">Home</a></li>
+                    <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                    <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                    <li class="active"><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                    <li><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                    <li><a href="/html-files/contact.html" class="nav_link">Contact Us</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </nav>
+            <div class="dropdown">
+                <li class="active"><a href="/" class="nav_link">Home</a></li>
+                <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                <li><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                <li><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                <li><a href="/html-files/contact.html" class="nav_link">Contact Us</a></li>
+            </div>
+        </header>
+
+        <section class="tracking">
+            <div class="tracking-header">
+                <h1>Tracking</h1>
+            </div>
+        </section>
+        <main>
+            <div class="image"><img src="/images/pngwing.com - 2022-10-16T135405 1.png" alt=""></div>
+            <div class="page-text">
+                <p>
+                    Technology plays a major role at Admiral Trucker (Nig) Ltd, from equipment monitoring/tracking to 
+                    information systems to customer service. Our goal is to drive costs down and efficiency levels up.
+                </p>
+                <p>
+                    In conjunction with Globacomm Telecoms (Glo), Our entire fleet is equipped with Communication
+                    technology. This gives us instant two-way communications with our drivers for dispatching and
+                    directions.
+                </p>
+                <p>
+                    Working with maps and commmunication devices, our drivers can request directions from their current 
+                    position to the next stop on their route, or in the unlikely event of a breakdown, to the nearest service facility.
+                </p>
+                <p>
+                    We monitor the engine data constantly to help our service departments keep fleet in top performing condition.
+                    GPS information from our tractors allow us to track your loads 24 hours a day, 7 days a week.
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="/images/Screenshot (8) 1.png" alt="logo">
+                </div>
+                <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="/html-files/index.html">Home</a></li>
+                        <li><a href="/html-files/about.html">About</a></li>
+                        <li><a href="/html-files/services.html">Services</a></li>
+                        <li><a href="/html-files/tracking.html">Tracking</a></li>
+                        <li><a href="/html-files/contact.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="services-footer">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="/html-files/services.html">Road Haulage & Logistics</a></li>
+                        <li><a href="/html-files/services.html">Distribution & WareHousing</a></li>
+                        <li><a href="/html-files/services.html">Equipment Learning</a></li>
+                        <li><a href="/html-files/services.html">Support Services</a></li>
+                        <li><a href="/html-files/services.html">Auto Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><a href="/html-files/contact.html">+234-7000009090</a></li>
+                        <li><a href="/html-files/contact.html">info@admiraltrucker.net</a></li>
+                        <li><a href="/html-files/contact.html">77th James Street,Lagos State</a></li>
+                        <li><a href="/html-files/contact.html">admiraltrucker.net</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+                <div class="foot-text"><p>Copyright &copy; 2022, Admiral Truckers Limited. All Rights Reserved.</p></div>
+        </footer>
+    </div>
+    <script>
+        const link = document.querySelectorAll('li');
+        link.forEach
+        ((links) => {
+            links.addEventListener("click", () => {
+                document.querySelector("li.active").classList.remove("active");
+                links.classList.add("active");
+            });
+        });
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnSvg = document.querySelector('.toggle_btn svg');
+        const dropdownMenu = document.querySelector('.dropdown');
+        toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle('open')
+        const isOpen = dropdownMenu.classList.contains('open')
+
+        toggleBtnSvg.classList = isOpen
+        ? `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+         </svg>`
+
+        : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>`
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css-files/contact.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="/images/Screenshot (8) 1.png" alt="logo">
+                <ul>
+                    <li><a href="/html-files/index.html" class="nav_link">Home</a></li>
+                    <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                    <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                    <li><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                    <li><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                    <li class="active"><a href="/" class="nav_link">Contact Us</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </nav>
+            <div class="dropdown">
+                <li class="active"><a href="/html-files/index.html" class="nav_link">Home</a></li>
+                <li><a href="/html-files/about.html" class="nav_link">About</a></li>
+                <li><a href="/html-files/services.html" class="nav_link">Services</a></li>
+                <li><a href="/html-files/tracking.html" class="nav_link">Tracking</a></li>
+                <li><a href="/html-files/career.html" class="nav_link">Career</a></li>
+                <li><a href="/" class="nav_link">Contact Us</a></li>
+            </div>
+        </header>
+
+        <section class="contact-bg">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <main>
+            <div class="options">
+                <h2>Fill the form below to send us a message:</h2>
+                <div class="contact-options">
+                    <img src="/images/Group 27.png" alt="location">
+                
+                    <img src="/images/Group 26.png" alt="email">
+                
+                    <img src="/images/Group 25.png" alt="phone">
+                </div>
+            </div>
+            <form action="" id="contactForm">
+                <div class="fullname">
+                    <input type="text" name="firstname" id="firstName" placeholder="First Name" />
+                    <input type="text" name="lastname" id="lastName" placeholder="Last Name" />
+                    <div id="errorMessages"></div>
+                </div>
+                <div class="details">
+                    <input type="text" name="business" id="businessName" placeholder="Business Name" />
+                    <input type="number" name="phone" id="phoneNumber" placeholder="Phone Number" />
+                </div>
+                <div class="msg">
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your Message here"></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="/images/Screenshot (8) 1.png" alt="logo">
+                </div>
+                <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="/html-files/index.html">Home</a></li>
+                        <li><a href="/html-files/about.html">About</a></li>
+                        <li><a href="/html-files/services.html">Services</a></li>
+                        <li><a href="/html-files/tracking.html">Tracking</a></li>
+                        <li><a href="/html-files/contact.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="services-footer">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="/html-files/services.html">Road Haulage & Logistics</a></li>
+                        <li><a href="/html-files/services.html">Distribution & WareHousing</a></li>
+                        <li><a href="/html-files/services.html">Equipment Learning</a></li>
+                        <li><a href="/html-files/services.html">Support Services</a></li>
+                        <li><a href="/html-files/services.html">Auto Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><a href="/html-files/contact.html">+234-7000009090</a></li>
+                        <li><a href="/html-files/contact.html">info@admiraltrucker.net</a></li>
+                        <li><a href="/html-files/contact.html">77th James Street,Lagos State</a></li>
+                        <li><a href="/html-files/contact.html">admiraltrucker.net</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+                <div class="foot-text"><p>Copyright &copy; 2022, Admiral Truckers Limited. All Rights Reserved.</p></div>
+        </footer>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnSvg = document.querySelector('.toggle_btn svg');
+        const dropdownMenu = document.querySelector('.dropdown');
+        const link = document.querySelectorAll('li');
+        link.forEach
+        ((links) => {
+            links.addEventListener("click", () => {
+                document.querySelector("li.active").classList.remove("active");
+                links.classList.add("active");
+            });
+        });
+        toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle('open')
+        const isOpen = dropdownMenu.classList.contains('open')
+
+        toggleBtnSvg.classList = isOpen
+        ? `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+         </svg>`
+
+        : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>`
+    }
+
+        document.getElementById("contactForm").addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            //clear previous error messages
+            document.getElementById("errorMessages").innerHTML = '';
+
+            // Get data
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const business = document.getElementById("businessName").value.trim();
+        const phoneNumber = document.getElementById("phoneNumber").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // validate data
+        const errors = [];
+        if (!firstName) {
+            errors.push("First name is required.");
+        }
+        if (!lastName) {
+            errors.push("Last name is required.");
+        }
+        if (!phoneNumber) {
+            errors.push("Phone Number is required.");
+        }
+        if (!businessName) {
+            errors.push("Business name is required.");
+        }
+        if (!email) {
+            errors.push("Email is required.");
+        }
+        if (!message) {
+            errors.push("Message is required.");
+        }
+
+        // display errors
+        if (errors.length > 0) {
+            const errorHtml = "<ul>" + errors.map(error => `<li>${error}</li>`).join('') + "</ul>";
+            document.getElementById("errorMessages").innerHTML = errorHtml;
+            return;
+        }
+        // data for submission
+        const formData = {
+            firstName,
+            lastName,
+            businessName,
+            phoneNumber,
+            email,
+            message
+        };
+        //simulate submission
+        setTimeout(() => {
+            alert("Form Submitted Successfully!");
+            document.getElementById("contactForm").reset();
+        }, 1000);
+        });
+
+    </script>
+</body>
+</html>
