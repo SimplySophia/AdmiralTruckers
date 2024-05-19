@@ -67,6 +67,7 @@ nav ul li.active::after{
 }
 .toggle_btn svg{
     width: 2rem;
+    display: none;
 }
 .page-1{
     background: url(/images/Pexels\ Photo\ by\ Jonathan\ Cooper.png);
@@ -386,6 +387,7 @@ footer .foot-text{
 
 /*DropDown*/
 .dropdown{
+    display: none;
     position: absolute;
     right: 2rem;
     top: 4.2rem;
@@ -418,10 +420,11 @@ footer .foot-text{
     nav ul{
         display: none;
     }
-    .toggle_btn{
+    .toggle_btn svg{
         display: block;
     }
     .dropdown{
+        display: block;
         left: 0;
     }
     .dropdown li{

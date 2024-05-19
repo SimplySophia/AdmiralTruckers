@@ -42,7 +42,7 @@ link.forEach
     
         const newsUrl = `https://news.google.com/home?hl=en-NG&gl=NG&ceid=NG:en${encodedLocation}`;
         
-        window.open(newsUrl);
+        window.open(newsUrl, '_blank');
 
     });
     
