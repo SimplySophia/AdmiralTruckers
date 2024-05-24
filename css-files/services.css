@@ -34,6 +34,7 @@ nav{
 }
 nav img{
     width: 120px;
+    margin-right: 5rem;
 }
 nav ul{
     list-style: none;
@@ -77,16 +78,13 @@ nav ul li.active::after{
     height: 400px;
     width: 100%;
 }
-.service-header{
-    position: absolute;
-    top: 13rem;
-    left: 5rem;
-    display: flex;
-}
+
 .service-header h1{
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
+    padding-left: 7rem;
+    padding-top: 13rem;
 }
 main{
     display: flex;
@@ -268,9 +266,9 @@ footer .foot-text{
     height: 270px;
 }
 
-@media only screen and (max-width: 436px){
-    .container{
-        width: 100vw;
+@media only screen and (max-width: 420px){
+    body{
+        width: 100%;
         margin: 0;
     }
     nav ul{
@@ -287,7 +285,7 @@ footer .foot-text{
         align-items: center;
     }
     main h3{
-        padding-left: 0.5rem;
+        padding-left: 0.8rem;
         width: 30ch;
     }
     .service-areas{
@@ -296,10 +294,20 @@ footer .foot-text{
         gap: 0.4rem;
     }
     .service-unit{
+        display: none;
         flex-direction: column-reverse;
     }
+    .services ul li{
+        padding: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .services ul li::marker{
+        color: rgb(238, 49, 49);
+        font-size: 1.5rem;
+    }
+    
     .hero p{
-        width: 40ch;
+        width: 35ch;
     }
     .operation h1{
         font-size: 1.5rem;

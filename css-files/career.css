@@ -35,6 +35,7 @@ nav{
 }
 nav img{
     width: 120px;
+    margin-right: 5rem;
 }
 nav ul{
     list-style: none;
@@ -78,16 +79,12 @@ nav ul li.active::after{
     height: 400px;
     width: 100%;
 }
-.career-header{
-    position: absolute;
-    top: 13rem;
-    left: 5rem;
-    display: flex;
-}
 .career-header h1{
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
+    padding-left: 7rem;
+    padding-top: 13rem;
 }
 main{
     display: flex;
@@ -180,9 +177,9 @@ footer .foot-text{
     height: 270px;
 }
 
-@media only screen and (max-width: 436px){
+@media only screen and (max-width: 420px){
     .container{
-        width: 100vw;
+        width: 100%;
         margin: 0;
     }
     nav ul{
@@ -202,7 +199,7 @@ footer .foot-text{
         width: 380px;
     }
     .page-text p{
-        width: 40ch;
+        width: 35ch;
     }
     
     .footer-container{

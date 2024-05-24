@@ -35,6 +35,7 @@ nav{
 }
 nav img{
     width: 120px;
+    margin-right: 5rem;
 }
 nav ul{
     display: flex;
@@ -158,6 +159,7 @@ nav ul li.active::after{
     justify-content: center;
     flex-direction: column;
     padding: 8rem;
+    transition: all ease 0.3s;
 }
 .about-header{
     margin-left: 43rem;
@@ -192,9 +194,13 @@ nav ul li.active::after{
     color: #ffffff;
     text-align: center;
     border-radius: 10px;
+    border: none;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem;
+}
+#moreContent3 {
+    font-size: 1rem;
 }
 .page-3{
     display: flex;
@@ -202,6 +208,8 @@ nav ul li.active::after{
     background-color: rgb(238, 49, 49);
     color: #ffffff;
     padding: 5rem;
+    transition: all ease 0.3s;
+
 }
 .featured-header{
     text-align: center;
@@ -223,6 +231,8 @@ nav ul li.active::after{
     flex-direction: column;
     background-color: rgb(230, 227, 227);
     padding: 5rem;
+    transition: all ease 0.3s;
+
 }
 .edge-image img{
     height: 500px;
@@ -252,6 +262,8 @@ nav ul li.active::after{
     align-items: center;
     flex-direction: column;
     padding: 2rem;
+    transition: all ease 0.3s;
+
 }
 .destination-header{
     text-align: center;
@@ -279,6 +291,8 @@ nav ul li.active::after{
     flex-direction: column;
     background-color: rgb(230, 227, 227);
     padding: 3rem;
+    transition: all ease 0.3s;
+
 }
 .news-header{
     margin-bottom: 2rem;
@@ -346,7 +360,7 @@ nav ul li.active::after{
     font-size: 0.8rem;
     text-align: left;
     padding: 0.7rem 0.3rem;
-    width: 50ch;
+    width: 40ch;
 }
 .page-6 .readmore span{
     font-size: 0.8rem;
@@ -398,7 +412,7 @@ footer .foot-text{
 .dropdown{
     display: none;
     position: absolute;
-    right: 2rem;
+    left: 2rem;
     top: 4.2rem;
     width: 390px;
     height: 0;
@@ -422,8 +436,8 @@ footer .foot-text{
     height: 270px;
 }
 @media only screen and (max-width: 420px){
-    .container{
-        width: 100vw;
+    body{
+        width: 100%;
         margin: 0;
     }
     nav ul{
@@ -502,7 +516,7 @@ footer .foot-text{
     }
     .page-2 .text p,
     .page-3 .text p{
-        width: 40ch;
+        width: 35ch;
     }
     .featured-header{
         font-size: 0.82rem;
@@ -511,14 +525,14 @@ footer .foot-text{
         width: 350px;
     }
     .edge-image img{
-        width: 380px;
+        width: 390px;
     }
     .edge-header{
         margin-left: 3.5rem;
         margin-bottom: 2rem;
     }
     .circle-list{
-        width: 45ch;
+        width: 43ch;
     }
     .destination-image img{
         width: 450px;
@@ -527,7 +541,7 @@ footer .foot-text{
         font-size: 0.82rem;
     }
     .page-5 .text p{
-        width: 30ch;
+        width: 35ch;
     }
     .event-container{
         flex-direction: column;
@@ -538,7 +552,7 @@ footer .foot-text{
         width: 350px;
     }
     .event-container .text p{
-        width: 38ch;
+        width: 35ch;
     }
     .footer-container{
         flex-direction: column;
