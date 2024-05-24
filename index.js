@@ -45,5 +45,48 @@ link.forEach
         window.open(newsUrl, '_blank');
 
     });
+    // function to choose
+    document.addEventListener('DOMContentLoaded', () => {
+        const pickDate1 = document.getElementById('pickDate1');
+        const pickDate2 = document.getElementById('pickDate2');
+        //set date in MM-DD-YYYY format
+        pickDate1.value = 'January 10, 2009';
+        pickDate2.value = 'January 25, 2009';
+
+    });
+    //add a read more content
+    const toggleReadMore = () => {
+        // get the specific content and link
+        const moreContent = document.querySelector('.moreContent');
+        const readMore = document.querySelector('.readMore');
+        const moreContent2 = document.getElementById('moreContent2');
+        const readMore2 = document.getElementById('readMore2');
+
+        // toggle the click
+        if (moreContent.style.display === 'none' || moreContent2.style.display === 'none') {
+            moreContent.style.display = 'inline';
+            readMore.textContent = 'Read Less';
+            moreContent2.style.display = 'inline';
+            readMore2.textContent = 'Read Less';
+
+
+        } else {
+            moreContent.style.display = 'none';
+            readMore.textContent = 'Read More';
+            moreContent2.style.display = 'none';
+            readMore2.textContent = 'Read More';
+            
+        }
+    };
+    //initialize all sections with display none
+    document.addEventListener('DOMContentLoaded', () => {
+       document.querySelectorAll('.moreContent').forEach(content => {
+           content.style.display = 'none';
+       });
+       document.querySelectorAll('.'moreContent2').forEach(content => {
+        content.style.display = 'none';
+    });
+       
+    })
     
         
