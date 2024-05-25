@@ -26,6 +26,7 @@ body{
     min-height: 100%;
 }
 header{
+    width: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +50,6 @@ nav img{
     margin-right: 6rem;
 }
 nav ul{
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@ nav ul li a{
 nav ul li.active::after{
     content: '';
     display: flex;
-    width:70px;
+    width: 50px;
     height: 3px;
     background-color: rgb(238, 49, 49);
     position: absolute;
@@ -75,24 +75,26 @@ nav ul li.active::after{
         width: 0;
     }
     to {
-        width: 70px;
+        width: 50px;
     }
 }
 .toggle_btn svg{
-    display: none;
     width: 1.5rem;
+    display: none;
     margin-right: 1rem;
+
 }
-.service{
+.page-8{
     background: url(/images/Rectangle\ 21.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     width: 100%;
+    margin: auto;
 }
 
-.service-header h1{
+.page-8 h1{
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
@@ -258,7 +260,7 @@ footer .foot-text{
 .dropdown{
     display: none;
     position: absolute;
-    right: 2rem;
+    left: 0;
     top: 4.2rem;
     width: 388px;
     height: 0;
@@ -269,7 +271,7 @@ footer .foot-text{
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown li{
-    padding: 0.7rem;
+    padding: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,6 +289,10 @@ footer .foot-text{
         width: 26rem;
         margin: 0;
     }
+    nav{
+        width: 420px;
+        margin: auto 0;
+    }
     nav ul{
         display: none;
     }
@@ -294,14 +300,25 @@ footer .foot-text{
         display: block;
     }
     .dropdown{
-        width: 24rem;
+        width: 22rem;
         display: block;
         top: 5.2rem;
-        left: 1rem;
+        left: 0;
         margin: auto;
     }
     .dropdown li{
         align-items: center;
+    }
+    .dropdown li:hover {
+        background-color: #ee3131;
+        border-radius: 10px;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
     }
     main h3{
         padding-left: 1.5rem;

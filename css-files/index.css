@@ -437,7 +437,7 @@ footer .foot-text{
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown li{
-    padding: 0.7rem;
+    padding: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -465,14 +465,18 @@ footer .foot-text{
         display: block;
     }
     .dropdown{
-        width: 24rem;
+        width: 22rem;
         display: block;
         top: 5.2rem;
-        left: 1rem;
+        left: 0;
         margin: auto;
     }
     .dropdown li {
         align-items: center;
+    }
+    .dropdown li:hover {
+        background-color: #ee3131;
+        border-radius: 10px;
     }
     .page-1 .page-text{
         display: flex;
