@@ -9,12 +9,22 @@
     /*list-style: none;*/
     font-family: 'League Spartan', sans-serif;
 }
-.container{
-    width: 100vw;
+::-webkit-scrollbar{
+    width: 0;
+    overflow: hidden;
+}
+body{
+    width: 100%;
     height: 100%;
     margin: auto;
 }
+.container{
+    flex: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
 header{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,8 +44,8 @@ nav{
     margin: auto;
 }
 nav img{
-    width: 120px;
-    margin-right: 5rem;
+    width: 100px;
+    margin-right: 6rem;
 }
 nav ul{
     list-style: none;
@@ -68,8 +78,9 @@ nav ul li.active::after{
     }
 }
 .toggle_btn svg{
-    width: 2rem;
+    width: 1.5rem;
     display: none;
+    margin-right: 1rem;
 }
 .career{
     background: url(/images/Rectangle\ 21.png);
@@ -155,7 +166,7 @@ footer .foot-text{
     position: absolute;
     right: 2rem;
     top: 4.2rem;
-    width: 390px;
+    width: 388px;
     height: 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -179,7 +190,8 @@ footer .foot-text{
 
 @media only screen and (max-width: 420px){
     .container{
-        width: 100%;
+        width: 24rem;
+        align-items: center;
         margin: 0;
     }
     nav ul{
@@ -189,14 +201,16 @@ footer .foot-text{
         display: block;
     }
     .dropdown{
+        width: 24rem;
         display: block;
         left: 0;
+        margin: auto;
     }
     .dropdown li{
         align-items: center;
     }
     .image img{
-        width: 380px;
+        width: 370px;
     }
     .page-text p{
         width: 35ch;
@@ -209,7 +223,9 @@ footer .foot-text{
     }
     
     .foot-text{
-        width: 35ch;
+        width: 32ch;
+        text-align: center;
+        line-height: 1.2rem;
         margin: auto;
     }
 }

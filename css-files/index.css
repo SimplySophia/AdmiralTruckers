@@ -9,11 +9,21 @@
     list-style: none;
     font-family: 'League Spartan', sans-serif;
 }
-.container{
-    width: 100vw;
-    height: 100%;
-    margin: auto;
+::-webkit-scrollbar{
+    width: 0;
+    overflow: hidden;
 }
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.container{
+    flex: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -34,8 +44,8 @@ nav{
     margin: auto;
 }
 nav img{
-    width: 120px;
-    margin-right: 5rem;
+    width: 100px;
+    margin-right: 6rem;
 }
 nav ul{
     display: flex;
@@ -67,16 +77,16 @@ nav ul li.active::after{
     }
 }
 .toggle_btn svg{
-    width: 2rem;
+    width: 1.5rem;
     display: none;
+    margin-right: 1rem;
 }
 .page-1{
     background: url(/images/Pexels\ Photo\ by\ Jonathan\ Cooper.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    margin: 0;
 }
 .page-text{
     display: flex;
@@ -290,7 +300,7 @@ nav ul li.active::after{
     align-items: center;
     flex-direction: column;
     background-color: rgb(230, 227, 227);
-    padding: 3rem;
+    padding: 2rem;
     transition: all ease 0.3s;
 
 }
@@ -412,9 +422,9 @@ footer .foot-text{
 .dropdown{
     display: none;
     position: absolute;
-    left: 2rem;
+    right: 2rem;
     top: 4.2rem;
-    width: 390px;
+    width: 388px;
     height: 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -437,8 +447,13 @@ footer .foot-text{
 }
 @media only screen and (max-width: 420px){
     body{
-        width: 100%;
+        width: 24rem;
+        align-items: center;
         margin: 0;
+    }
+    nav{
+        width: 100%;
+        margin: auto 0;
     }
     nav ul{
         display: none;
@@ -447,24 +462,22 @@ footer .foot-text{
         display: block;
     }
     .dropdown{
+        width: 24rem;
         display: block;
         left: 0;
+        margin: auto;
     }
     .dropdown li{
         align-items: center;
     }
-    .page-1{
-        width: 100%;
-        height: 100%;
-    }
-    .page-text{
+    .page-1 .page-text{
         display: flex;
         justify-content: center;
         align-items: flex-start;
         gap: 0.3rem;
-        margin: 0.2rem;
+        margin: 0.1rem;
     }
-    .page-text h1{
+    .page-1 h1{
         width: 7ch;
         text-align: left;
         font-size: 2.8rem;
@@ -478,12 +491,6 @@ footer .foot-text{
         text-align: left;
         margin-left: 2rem;
         margin-top: -4rem;
-    }
-    .page-text .action-btn{
-        padding: 1rem 2.5rem;
-        font-size: 1.2rem;
-        margin-top: 0.2rem;
-        margin-left: 2rem;
     }
     .container-resources{
         width: 300px;
@@ -502,6 +509,11 @@ footer .foot-text{
         flex-direction: column;
         align-items: center;
     }
+    .page-2 h1{
+        text-align: center;
+        margin-top: -2rem;
+        font-size: 2rem;
+    }
     .content{
         flex-direction: column;
         align-items: center;
@@ -512,7 +524,7 @@ footer .foot-text{
         font-size: 0.82rem;
     }
     .about-image img{
-        width: 350px;
+        width: 320px;
     }
     .page-2 .text p,
     .page-3 .text p{
@@ -522,20 +534,20 @@ footer .foot-text{
         font-size: 0.82rem;
     }
     .featured-image img{
-        width: 350px;
+        width: 320px;
     }
     .edge-image img{
-        width: 390px;
+        width: 360px;
     }
     .edge-header{
         margin-left: 3.5rem;
         margin-bottom: 2rem;
     }
-    .circle-list{
-        width: 43ch;
+    .circle-list p{
+        width: 25ch;
     }
     .destination-image img{
-        width: 450px;
+        width: 430px;
     }
     .destination-header{
         font-size: 0.82rem;
@@ -549,7 +561,8 @@ footer .foot-text{
     }
     .event-container img,
     .event-container .content{
-        width: 350px;
+        width: 320px;
+        transition: all 0.2s ease;
     }
     .event-container .text p{
         width: 35ch;
@@ -560,7 +573,9 @@ footer .foot-text{
         gap: 2rem;
     }
     .foot-text{
-        width: 35ch;
+        width: 32ch;
+        text-align: center;
+        line-height: 1.2rem;
         margin: auto;
     }
 

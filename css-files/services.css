@@ -8,10 +8,19 @@
     text-decoration: none;
     font-family: 'League Spartan', sans-serif;
 }
-.container{
-    width: 100vw;
+::-webkit-scrollbar{
+    width: 0;
+    overflow: hidden;
+}
+body{
+    width: 100%;
     height: 100%;
     margin: auto;
+}
+.container{
+    flex: 1;
+    min-width: 100%;
+    min-height: 100%;
 }
 header{
     display: flex;
@@ -33,8 +42,8 @@ nav{
     margin: auto;
 }
 nav img{
-    width: 120px;
-    margin-right: 5rem;
+    width: 100px;
+    margin-right: 6rem;
 }
 nav ul{
     list-style: none;
@@ -68,7 +77,8 @@ nav ul li.active::after{
 }
 .toggle_btn svg{
     display: none;
-    width: 2rem;
+    width: 1.5rem;
+    margin-right: 1rem;
 }
 .service{
     background: url(/images/Rectangle\ 21.png);
@@ -244,7 +254,7 @@ footer .foot-text{
     position: absolute;
     right: 2rem;
     top: 4.2rem;
-    width: 390px;
+    width: 388px;
     height: 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -268,7 +278,8 @@ footer .foot-text{
 
 @media only screen and (max-width: 420px){
     body{
-        width: 100%;
+        width: 24rem;
+        align-items: center;
         margin: 0;
     }
     nav ul{
@@ -278,14 +289,16 @@ footer .foot-text{
         display: block;
     }
     .dropdown{
+        width: 24rem;
         display: block;
         left: 0;
+        margin: auto;
     }
     .dropdown li{
         align-items: center;
     }
     main h3{
-        padding-left: 0.8rem;
+        padding-left: 1.5rem;
         width: 30ch;
     }
     .service-areas{
@@ -314,10 +327,13 @@ footer .foot-text{
         text-align: center;
     }
     .operation img{
-        width: 350px;
+        width: 340px;
     }
     .highlighted-infrastructure{
         margin: auto;
+    }
+    .highlighted-infrastructure li{
+        width: 35ch;
     }
     .method{
         display: flex;
@@ -329,7 +345,7 @@ footer .foot-text{
         margin-top: 1.5rem;
     }
     .text p{
-        width: 30ch;
+        width: 28ch;
     }
     .other-services h1{
         padding: 0;
@@ -348,7 +364,9 @@ footer .foot-text{
     }
     
     .foot-text{
-        width: 35ch;
+        width: 32ch;
+        text-align: center;
+        line-height: 1.2rem;
         margin: auto;
     }
 
