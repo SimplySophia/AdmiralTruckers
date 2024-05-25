@@ -14,9 +14,12 @@
     overflow: hidden;
 }
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: auto 0;
 }
 .container{
     flex: 1;
@@ -86,6 +89,7 @@ nav ul li.active::after{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
     margin: 0;
 }
 .page-text{
@@ -422,8 +426,8 @@ footer .foot-text{
 .dropdown{
     display: none;
     position: absolute;
-    right: 2rem;
-    top: 4.2rem;
+    left: 0;
+    top: 4.5rem;
     width: 388px;
     height: 0;
     background: rgba(255, 255, 255, 0.1);
@@ -446,9 +450,8 @@ footer .foot-text{
     height: 270px;
 }
 @media only screen and (max-width: 420px){
-    body{
-        width: 24rem;
-        align-items: center;
+    .container{
+        width: 26rem;
         margin: 0;
     }
     nav{
@@ -464,10 +467,11 @@ footer .foot-text{
     .dropdown{
         width: 24rem;
         display: block;
-        left: 0;
+        top: 5.2rem;
+        left: 1rem;
         margin: auto;
     }
-    .dropdown li{
+    .dropdown li {
         align-items: center;
     }
     .page-1 .page-text{
@@ -537,7 +541,7 @@ footer .foot-text{
         width: 320px;
     }
     .edge-image img{
-        width: 360px;
+        width: 390px;
     }
     .edge-header{
         margin-left: 3.5rem;
