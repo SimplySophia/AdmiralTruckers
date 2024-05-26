@@ -21,7 +21,6 @@ body{
     height: 100%;
     margin: auto 0;
     overflow-x: hidden;
-
 }
 
 .container{
@@ -188,6 +187,7 @@ footer .foot-text{
     .container{
         width: 26rem;
         margin: 0;
+        overflow-x: hidden;
     }
     nav ul{
         display: none;

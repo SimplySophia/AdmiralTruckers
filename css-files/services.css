@@ -290,6 +290,7 @@ footer .foot-text{
     .container{
         width: 26rem;
         margin: 0;
+        overflow-x: hidden;
     }
     nav{
         width: 100%;
@@ -317,7 +318,8 @@ footer .foot-text{
     }
     .main h3 {
         text-align: left;
-        padding:auto 3rem;
+        padding: auto;
+        width: 30ch;
     }
     .service-areas{
         flex-direction: column;
