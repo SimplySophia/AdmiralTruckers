@@ -163,6 +163,9 @@ nav ul li.active::after{
     font-size: 1rem;
     font-weight: 500;
 }
+.resources a{
+    color: #000;
+}
 .line{
     background-color: rgb(238, 49, 49);
     width: 3px;
