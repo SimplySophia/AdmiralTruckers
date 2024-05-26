@@ -163,9 +163,6 @@ nav ul li.active::after{
     font-size: 1rem;
     font-weight: 500;
 }
-.resources a{
-    color: #000;
-}
 .line{
     background-color: rgb(238, 49, 49);
     width: 3px;
@@ -180,10 +177,8 @@ nav ul li.active::after{
 }
 .about-header h1{
     width: 100%;
-    padding: 0 -5rem;
-    font-size: 1.3rem;
-    font-size: 1.3rem;
-    font-weight: 700;
+    text-align: center;
+    padding: 0 ;
     color: rgb(238, 49, 49);
 }
 .content{
@@ -253,7 +248,8 @@ nav ul li.active::after{
 
 }
 .edge-image img{
-    height: 500px;
+    height: 450px;
+    margin-top: 3rem;
 }
 .edge-header{
     margin-left: 43rem;
@@ -524,7 +520,7 @@ footer .foot-text{
     .page-2 h1{
         text-align: center;
         margin-top: -2rem;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     .content{
         flex-direction: column;
